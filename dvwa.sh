@@ -12,8 +12,8 @@ systemctl enable mariadb
 systemctl status mariadb
 
 mysql -u root -e "create database dvwa" 
-mysql -u root -e "create user 'edward'@'localhost' identified by '123'" 
-mysql -u root -e "grant all on dvwa.* to 'edward'@'localhost'" 
+mysql -u root -e "create user 'dvwa'@'localhost' identified by '123'" 
+mysql -u root -e "grant all on dvwa.* to 'dvwa'@'localhost'" 
 mysql -u root -e "flush privileges"
 
 setsebool -P httpd_can_network_connect_db 1
